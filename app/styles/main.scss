@@ -1,2 +1,150 @@
 $icon-font-path: "fonts/bootstrap/";
 @import "../app/styles/stylesheets/_bootstrap.scss";
+
+ul {
+  list-style-type: none;
+}
+
+.jumbo-wrapper{
+    position: relative;
+}
+
+.jumbotron {
+  text-align: center;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  background: url(/images/one.jpg) no-repeat center center;
+  background-size: cover;  
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.relative{
+    position: relative;
+}
+
+.overlay {
+    position: relative;
+    top: -50px;
+    text-align: center;
+}
+
+.wrap {
+    height: 640px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    vertical-align: top;
+    position: relative;
+    .header {
+        vertical-align: top;
+        position: relative;
+        height: 120px;
+        h2{
+            display:inline-block;
+            position: relative;
+            top: 30px;
+            color: black;
+        }
+        a > img {
+            display:inline-block;
+            float: right;
+            padding: 20px;
+            padding-right: 50px;
+        }
+    }
+}
+
+.blocks {
+    padding: 10px;
+    padding-left: 50px;
+}
+
+.block {
+    height: 200px;
+    width: 270px;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    margin: 10px;
+    box-shadow: 10px 10px 5px #888;
+    .big {
+        font-weight: bold;
+        font-size: 19px;
+        color:white;
+        vertical-align: bottom;
+        position: relative;
+        top: 150px;
+        left: 10px;
+        width: 250px;
+    }
+    nav {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        display: none;
+        padding-bottom: 20px;
+    }
+    button {
+        display: none;
+        float: right;
+    }
+}
+
+.one {
+    background-size: cover;
+    background-image: url('/images/one.jpg');
+}
+
+.two {
+    background-size: cover;
+    background-image: url('/images/one.jpg');
+}
+
+.three {
+    background-size: cover;
+    background-image: url('/images/one.jpg');
+}
+
+.four {
+    background-size: cover;
+    background-image: url('/images/one.jpg');
+}
+
+.content {
+    display: none;
+    h1{
+        color:white;
+        font-weight: bolder;
+        margin-left: 30px;
+    }
+    p {
+        color: white;
+        text-align: justify;
+        margin-left: 30px;
+        font-weight: bolder;
+    }
+}
+
+
+.clone {
+    position:absolute;
+}
+
+
+/* Shraddha */
+#myModal {
+    top: 23%;
+    height: 1000px;
+    outline: none;
+}
+
+#myModal .modal-dialog {
+    width: 48%;
+}
+
+.pics {
+/*    padding-top: 10px;*/
+    float: right;
+    display: none;
+}
