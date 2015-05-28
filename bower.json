@@ -2,6 +2,7 @@
   "name": "fomentotravels",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1"
+    "jquery": "~1.11.1",
+    "css-modal": "~1.3.0"
   }
 }

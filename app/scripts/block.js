@@ -1,7 +1,7 @@
-
 /*global $:false */
 $(document).ready(function () {
     'use strict';
+    $('.wrap').height((($(window).height() / 3) * 2));
     $('.block').bind('click', function () {
         var that = $(this),
             offsets = that.position(),
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 'left': left
             })
             .animate({
-                'top': 120,
+                'top': 15,
                 'left': 35,
                 'width': width,
                 'height': height
