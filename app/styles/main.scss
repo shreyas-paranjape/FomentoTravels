@@ -15,7 +15,7 @@ ul {
   width: 100%;
   height:100%;
   position: absolute;
-  background: url(/images/one.jpg) no-repeat center center;
+  background: url(/images/kingfisher.JPG) no-repeat center center;
   background-size: cover;  
   border-bottom: 1px solid #e5e5e5;
 }
@@ -26,13 +26,11 @@ ul {
 
 .overlay {
     position: relative;
-    top: -50px;
+    top: -150px;
     text-align: center;
 }
 
 .wrap {
-    /* height: 640px;
-    width: 700px; */
     margin: 0 auto;
     background-color: #fff;
     vertical-align: top;
@@ -132,20 +130,31 @@ ul {
     position:absolute;
 }
 
-
-/* Shraddha */
-#myModal {
-    top: 23%;
-    height: 1000px;
-    outline: none;
+.box-link {
+    height: 100%;
+    background-color: black;
+    color: white;
+    /*margin : 30px;*/
+    padding-bottom: 10px;
+    p, h4 {
+        text-align: left;
+    }
+    h3 {
+        font-variant-caps: all-petite-caps;
+    }
+    hr {
+        width: 25%;
+    }
 }
 
-#myModal .modal-dialog {
-    width: 48%;
-}
-
-.pics {
-/*    padding-top: 10px;*/
-    float: right;
-    display: none;
+footer {
+    width: 100%;
+    position: absolute;
+    hr {
+        border: none;
+        height: 3px;
+        /* Set the hr color */
+        color: #333; /* old IE */
+        background-color: #333; /* Modern Browsers */
+    }
 }
