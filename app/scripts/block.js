@@ -1,49 +1,50 @@
 /*global $:false */
 $(document).ready(function () {
     'use strict';
-    $('.wrap').height((($(window).height() / 3) * 2) - 50);
-    $('.block').bind('click', function () {
+    var fader = function (){
         var that = $(this),
-            offsets = that.position(),
-            top = offsets.top,
-            left = offsets.left,
             clone = that.clone(),
-            parent = that.parent(),
-            width = parent.width(),
-            height = parent.height(),
-            toggleLinks = function () {
-                $('nav', clone).toggle();
-                $('div.big', clone).toggle();
-                $('.content', clone).toggle();
-                $('.pics', clone).toggle();
-                $('button', clone).toggle();
-            },
-            fadOut = function () {
-                clone.animate({
-                    'top': top,
-                    'left': left,
-                    'width': 0,
-                    'height': 0
-                }, 1000, 'swing', toggleLinks)
-                    .siblings().animate({
-                        'opacity': 1
-                    }, 1000);
-            };
-        clone.addClass('clone')
-            .appendTo(parent)
-            .css({
-                'top': top,
-                'left': left
-            })
-            .animate({
-                'top': 15,
-                'left': 35,
-                'width': width,
-                'height': height
-            }, 1000, 'swing', toggleLinks)
-            .siblings().animate({
-                'opacity': 0.1
-            }, 1000);
-        $('button', clone).click(fadOut);
-    });
+            offset = that.offset(),
+            blocks = that.parent().parent().parent();
+        $('.block').unbind('click');
+        clone
+            .addClass('clone')
+            .css({'top':offset.top,'left':offset.left})
+            .bind('click',function () {})
+            .prependTo(blocks)
+            .animate({ top:100, left:100, width : blocks.width() },1000,'swing',function (){
+                    $('.fadout',clone).toggle();
+                    $('.content',clone).toggle();
+                    $('.content-more',clone).toggle();
+            });
+        
+        $('.block').not(clone)
+            .animate({opacity:0},1000,'swing',function (){});
+        
+        $('.fadout',clone).bind('click', function (){
+            var topCurrent,leftCurrent;
+            if(clone.hasClass('one')){
+                topCurrent = offset.top;
+                leftCurrent = offset.left;
+            }else if(clone.hasClass('two')){
+                topCurrent = offset.top;
+                leftCurrent = offset.left + that.width();
+            }else if(clone.hasClass('three')){
+                topCurrent = offset.top + that.height();
+                leftCurrent = offset.left;
+            }else if(clone.hasClass('four')){
+                topCurrent = offset.top + that.height();
+                leftCurrent = offset.left + that.width();
+            }
+            $('.block').not(clone).bind('click',fader);
+            clone.animate({ top:topCurrent, left:leftCurrent , width:0, height:0},1000,'swing',function (){
+                $('.fadout',clone).toggle();
+            });
+            $('.block').not(clone).animate({opacity:1},1000,'swing',function (){
+                clone.remove();
+            });
+        });
+    };
+    $('.block').bind('click',fader);
+    
 });
