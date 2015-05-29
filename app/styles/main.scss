@@ -90,6 +90,11 @@ ul {
     }
 }
 
+.pics {
+    float: right;
+    display: none;
+}
+
 .one {
     background-size: cover;
     background-image: url('/images/one.jpg');

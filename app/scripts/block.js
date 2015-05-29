@@ -1,7 +1,7 @@
 /*global $:false */
 $(document).ready(function () {
     'use strict';
-    $('.wrap').height((($(window).height() / 3) * 2));
+    $('.wrap').height((($(window).height() / 3) * 2) - 50);
     $('.block').bind('click', function () {
         var that = $(this),
             offsets = that.position(),
