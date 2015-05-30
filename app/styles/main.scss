@@ -4,20 +4,21 @@ $icon-font-path: "fonts/bootstrap/";
 
 $primary-color : #413f98;
 $secondary-color : #0fb0cf;
+$shadow-color: #882a84;
 
 @font-face {
-    font-family: 'BrandonGrotReg'; /*a name to be used later*/
-    src: url('/styles/fonts/Brandon_reg.otf'); /*URL to font*/
+    font-family: 'BrandonGrotReg'; 
+    src: url('/styles/fonts/Brandon_reg.otf'); 
 }
 
 @font-face {
-    font-family: 'BrandonGrotBold'; /*a name to be used later*/
-    src: url('/styles/fonts/Brandon_bld.otf'); /*URL to font*/
+    font-family: 'BrandonGrotBold'; 
+    src: url('/styles/fonts/Brandon_bld.otf'); 
 }
 
 @font-face {
-    font-family: 'BrandonGrotLight'; /*a name to be used later*/
-    src: url('/styles/fonts/Brandon_light.otf'); /*URL to font*/
+    font-family: 'BrandonGrotLight'; 
+    src: url('/styles/fonts/Brandon_light.otf'); 
 }
 
 
@@ -29,13 +30,30 @@ body {
     font-family: 'BrandonGrotReg';
 }
 
-body > header {
+header.page {
     min-height: 50px;
-    figure {
-        padding: 20px; 
-        box-shadow: 10px 10px 5px #545554;
-        margin: 10px;
-    }
+    margin: 0px auto;
+}
+
+.fomento {
+    color: $primary_color;
+    padding: 5px;
+    font-variant-caps: all-petite-caps;
+    font-family: 'BrandonGrotBold';
+    font-size: 40;
+}
+
+.travels {
+    color: $secondary_color;
+    padding: 5px;
+    font-variant-caps: all-petite-caps;
+    font-family: 'BrandonGrotReg';
+    font-size: 40;
+}
+
+a:hover {
+    color: $primary_color;
+    text-decoration: none;
 }
 
 ul {
@@ -45,6 +63,7 @@ ul {
 footer {
     width: 100%;
     position: relative;
+    margin-bottom: 20px;
     hr {
         border: none;
         height: 2px;
@@ -68,9 +87,9 @@ footer {
 .jumbotron {
   text-align: center;
   width: 100%;
-  height:100%;
+  height: 100%;
   position: absolute;
-  background: url(/images/home.jpg) no-repeat center center;
+  background: url(/images/index.jpg) no-repeat center center;
   background-size: cover;  
   border-bottom: 1px solid #e5e5e5;
 }
@@ -81,7 +100,7 @@ footer {
 
 .overlay {
     position: relative;
-    top: -150px;
+    top: -100px;
     text-align: center;
 }
 
@@ -92,7 +111,6 @@ footer {
     color: white;
     padding-bottom: 10px;
     margin-bottom: 20px;
-    box-shadow: 10px 10px 5px #882a84;
     p {
         text-align: left;
         padding-bottom: 10px;
@@ -103,6 +121,7 @@ footer {
     h3 {
         font-variant-caps: all-petite-caps;
         font-family: 'BrandonGrotBold';
+        text-align: center;
     }
     hr {
         width: 25%;
@@ -119,14 +138,20 @@ footer {
 /************************ Expanding blocks *************************************/
 
 .blocks{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     header {
         position: relative;
-        padding: 20px;
         h3{
             display: inline-block;
+            margin: 15px;
             margin-left: 30px;
             color : white;
+            font-family: 'BrandonGrotBold';
+            font-variant-caps: all-petite-caps;
+        }
+        h3:hover{
+            color: $secondary_color;
         }
         a {
             color: white;
@@ -138,32 +163,10 @@ footer {
     }
 }
 
-.clone {
-    position : absolute;
-    cursor: default;
-}
-
-.content-more{
-    display: none;
-    max-height: 80%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    cursor: default;
-    background-color: white;
-    color: black;
-    padding-top: 20px;
-    p {
-        padding-left: 20px;
-    }
-}
-
 .block {
     background-color: $primary-color;
-    margin: 10px;
-    padding: 0;
-    padding-bottom: 10px;
-    box-shadow: 10px 10px 5px #888;
-    @include border-radius( 10px );
+    margin: 5px;
+    padding: 0 ;
     cursor: pointer;
     .fadout {
         display: none;
@@ -177,6 +180,41 @@ footer {
         height:40px;
         font-size: 30;
         vertical-align: middle;
-        text-align: center
+        text-align: center;
+        float:right;
+    }
+    .fadout:hover {
+        color: $shadow_color;
+    }
+}
+
+.clone {
+    position : absolute;
+    cursor: default;
+    z-index: 999;
+    h3{
+        font-size: 40;
+    }
+}
+
+.content {
+    overflow: hidden;
+    img {
+        width:100%;
+        height:33%;
+    }
+}
+
+.content-more{
+    display: none;
+    cursor: default;
+    background-color: white;
+    color: black;
+    padding-top: 20px;
+    overflow-x: hidden;
+    .overlay-content {
+        padding: 0 10px 0 10px;
+        height: 80%;
+         overflow-y: auto;
     }
 }
