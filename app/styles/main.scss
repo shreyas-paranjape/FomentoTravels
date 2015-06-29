@@ -141,7 +141,7 @@ footer {
 /************************ Expanding blocks *************************************/
 
 .blocks {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     header {
         position: relative;
@@ -219,6 +219,7 @@ footer {
     .overlay-content {
         padding: 0 10px 0 10px;
         height: 80%;
+        font-size: 20;
         hr {
             width: 25%;
             height: 2px;
@@ -228,7 +229,7 @@ footer {
         //overflow-y: auto;
     }
 }
-
+/*
 
     .hello {
         background-color: $secondary-color;
@@ -243,4 +244,4 @@ footer {
     .hello:hover {
         color: white;
         
-    }
+    }*/

@@ -25,7 +25,7 @@ $(document).ready(function () {
             .animate({ top: blockOneOffset.top - 4,
                       left: blockOneOffset.left - 4,
                       width : blocks.width() + 18,
-                      height: blocks.height() - 10 }, 1000, 'swing',
+                      height: blocks.height() - 100 }, 1000, 'swing',
                 function () {
                     $('.content-more', clone).toggle();
                 });
