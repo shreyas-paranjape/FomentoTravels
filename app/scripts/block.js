@@ -1,7 +1,7 @@
 /*global $:false */
 $(document).ready(function () {
     'use strict';
-    
+     //$('.blocks').height($(window).height());
     var fader = function () {
         var that = $(this),
             clone = that.clone(),
@@ -16,6 +16,7 @@ $(document).ready(function () {
         
         $('.fadout', clone).toggle();
         $('.content', clone).remove();
+        clone.css("background-color","white");
 
         clone
             .addClass('clone')
@@ -25,7 +26,7 @@ $(document).ready(function () {
             .animate({ top: blockOneOffset.top - 4,
                       left: blockOneOffset.left - 4,
                       width : blocks.width() + 18,
-                      height: blocks.height() - 100 }, 1000, 'swing',
+                      height: blocks.height()}, 1000, 'swing',
                 function () {
                     $('.content-more', clone).toggle();
                 });

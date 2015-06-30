@@ -8,6 +8,10 @@ $secondary-color: #0fb0cf;
 $shadow-color: #882a84;
 /* Fonts */
 
+.container {
+    width: 80%;
+}
+
 @font-face {
     font-family: 'BrandonGrotReg';
     src: url('/styles/fonts/Brandon_reg.otf');
@@ -32,9 +36,21 @@ body {
     font-family: 'BrandonGrotReg';
 }
 
+.col-lg-4 {
+    padding: 35px;
+}
+
+.col-md-4 {
+    padding: 20px;
+}
+
+.col-sm-4 {
+    padding: 10px;
+}
+
 header.page {
-    min-height: 50px;
     margin: 0px auto;
+    margin-left: 50px;
 }
 
 .fomento {
@@ -42,15 +58,15 @@ header.page {
     padding: 5px;
     font-variant-caps: all-petite-caps;
     font-family: 'BrandonGrotBold';
-    font-size: 40;
+    font-size: 40px;
 }
 
-.travels {
+.travel {
     color: $secondary_color;
     padding: 5px;
     font-variant-caps: all-petite-caps;
     font-family: 'BrandonGrotReg';
-    font-size: 40;
+    font-size: 40px;
 }
 
 a:hover {
@@ -110,11 +126,16 @@ footer {
 }
 
 .box-link {
-    height: 100%;
+    //height: 100%;
     background-color: $primary-color;
     color: white;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    //margin: 30px;
+    //margin: 30px;
+    //margin-bottom: 20px;
+    margin: 0px auto;
+    padding: 0px 20px 20px 20px;
+    width: 90%;
+    
     p {
         text-align: left;
         padding-bottom: 10px;
@@ -129,6 +150,8 @@ footer {
     }
     hr {
         width: 25%;
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
     a {
         color: white;
@@ -141,10 +164,9 @@ footer {
 /************************ Expanding blocks *************************************/
 
 .blocks {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     header {
-        position: relative;
         h3 {
             display: inline-block;
             margin: 15px;
@@ -169,9 +191,10 @@ footer {
 
 .block {
     background-color: $primary-color;
-    margin: 5px;
+    //margin: 6px;
     padding: 0;
     cursor: pointer;
+    position:relative;
     .fadout {
         display: none;
         background-color: $secondary-color;
@@ -190,6 +213,15 @@ footer {
     .fadout:hover {
         color: $shadow_color;
     }
+    
+}
+
+.block-header {
+    position: absolute;
+    top: 0px;
+    z-index: 999;
+    width: 100%;
+    background-color: $primary-color;
 }
 
 .clone {
@@ -205,7 +237,7 @@ footer {
     overflow: hidden;
     img {
         width: 100%;
-        height: 33%;
+        height: 43%;
     }
 }
 
@@ -214,7 +246,7 @@ footer {
     cursor: default;
     background-color: white;
     color: black;
-    padding-top: 20px;
+    padding-top: 80px;
     overflow-x: hidden;
     .overlay-content {
         padding: 0 10px 0 10px;
@@ -229,6 +261,8 @@ footer {
         //overflow-y: auto;
     }
 }
+
+
 /*
 
     .hello {
