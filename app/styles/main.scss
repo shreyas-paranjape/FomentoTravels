@@ -1,6 +1,8 @@
 $icon-font-path: "fonts/bootstrap/";
 @import "../app/styles/stylesheets/_bootstrap.scss";
 @import "../bower_components/css-modal/modal.scss";
+@import "../app/styles/stylesheets/bourbon/bourbon";
+@import "../app/styles/stylesheets/neat/neat";
 /* Colour */
 
 $primary-color: #413f98;
@@ -98,6 +100,45 @@ footer {
 
 .no-padding {
     padding: 0;
+}
+//legacy
+
+.legacy-col1 {
+    padding:5 15 25 15;
+    margin-right: -5px;
+    background-color: #ADD8E6;
+    
+}
+.legacy-col2 {
+    padding: 5 15 25 15;
+    margin-left: -5px;
+    background-color: #b0c4de;
+}
+
+.blocks1 {
+    width: 90%;
+    margin: 0 auto;
+    header {
+        h3 {
+            display: inline-block;
+            margin: 15px;
+            margin-left: 30px;
+            color: white;
+            font-family: 'BrandonGrotBold';
+            font-variant-caps: all-petite-caps;
+            text-decoration: underline;
+        }
+        h3:hover {
+            color: $secondary_color;
+        }
+        a {
+            color: white;
+            text-align: left;
+        }
+        a:hover {
+            color: $secondary-color;
+        }
+    }
 }
 /***************** Home page ***********************************/
 
@@ -262,20 +303,111 @@ footer {
     }
 }
 
+//trial
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
 
-/*
+  background: url("../images/ts2.jpg");
+    
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: 100px;
+  margin-bottom: $base-line-height;
+  
+  @include media($medium-screen) {
+    width: 100%;
+  }
 
-    .hello {
-        background-color: $secondary-color;
-        position: relative;
-        width: 200px;
-        bottom: 20px;
-        padding: 2px;
-        font-family: 'BrandonGrotBold';
-        color: $primary-color;
-        font-size: 12px;
+  .hover-tile-container {
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, 0.8s ease-in-out);
+    background: inherit;
+    color: white;
+    height: 100px;
+    overflow: hidden;
+    padding: $base-spacing;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
     }
-    .hello:hover {
-        color: white;
-        
-    }*/
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.hover-tile-outer1 {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
+
+  background: url("../images/ts3.jpg");
+    
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: 100px;
+  margin-bottom: $base-line-height;
+  
+  @include media($medium-screen) {
+    width: 100%;
+  }
+
+  .hover-tile-container {
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, 0.8s ease-in-out);
+    background: inherit;
+    color: white;
+    height: 100px;
+    overflow: hidden;
+    padding: $base-spacing;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
+    }
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+
