@@ -175,9 +175,10 @@ footer {
             font-family: 'BrandonGrotBold';
             font-variant-caps: all-petite-caps;
             text-decoration: underline;
+            opacity: 1.0;
         }
         h3:hover {
-            color: $secondary_color;
+            font-weight: bolder;
         }
         a {
             color: white;
@@ -190,8 +191,6 @@ footer {
 }
 
 .block {
-    background-color: $primary-color;
-    //margin: 6px;
     padding: 0;
     cursor: pointer;
     position:relative;
@@ -221,16 +220,17 @@ footer {
     top: 0px;
     z-index: 999;
     width: 100%;
-    background-color: $primary-color;
+    background: url('/images/trans.png') no-repeat;
+     background-size: 100%;
 }
 
 .clone {
     position: absolute;
     cursor: default;
     z-index: 999;
-    h3 {
+    /*h3 {
         font-size: 40;
-    }
+    }*/
 }
 
 .content {
@@ -248,6 +248,7 @@ footer {
     color: black;
     padding-top: 80px;
     overflow-x: hidden;
+    opacity: 0;
     .overlay-content {
         padding: 0 10px 0 10px;
         height: 80%;
@@ -258,24 +259,5 @@ footer {
             color: $primary-color;
             background-color: $primary-color;
         }
-        //overflow-y: auto;
     }
 }
-
-
-/*
-
-    .hello {
-        background-color: $secondary-color;
-        position: relative;
-        width: 200px;
-        bottom: 20px;
-        padding: 2px;
-        font-family: 'BrandonGrotBold';
-        color: $primary-color;
-        font-size: 12px;
-    }
-    .hello:hover {
-        color: white;
-        
-    }*/
