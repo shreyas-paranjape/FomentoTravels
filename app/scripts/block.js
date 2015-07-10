@@ -52,4 +52,8 @@ $(document).ready(function () {
     };
     $('.block').bind('click', fader);
     
+    window.onhashchange = function(){
+        console.log(location.hash);
+    };
+    
 });

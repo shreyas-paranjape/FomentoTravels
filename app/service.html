@@ -21,7 +21,10 @@
         <header class="row page">
             <a href="/index.html">
                 <figure>
-                    <h2><span class="fomento">Fomento</span><span class="travel">Travel</span></h2>
+                    <h2>
+                        <!--<i class="glyphicon glyphicon-home" aria-hidden="true"></i>-->
+                        <span class="fomento">Fomento</span><span class="travel">Travel</span>
+                    </h2>
                 </figure>
             </a>
         </header>
@@ -53,15 +56,15 @@
                                         </div>
                                         <div class="row" style="margin:0px">
                                             <div class="col-lg-6 col-md-6 col-sm-6 padding-5" >
-                                                <a href="#hotel">
+                                                <a data-toggle="modal" class="btn no-padding" data-target="#hotel">
                                                     <img src="images/1.2.jpg"  />
                                                     <div class="link-text">Hotels</div>
                                                 </a>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 padding-5" >
-                                                <a href="#hotel-logistics">
-                                                <img src="images/1.2.jpg"  />
-                                                <div class="link-text">Hotel logistics</div>
+                                                <a data-toggle="modal" class="btn no-padding" data-target="#hotel-logistics">
+                                                    <img src="images/1.2.jpg"  />
+                                                    <div class="link-text">Hotel logistics</div>
                                                 </a>
                                             </div>
                                         </div>
@@ -288,47 +291,51 @@
             </nav>
         </footer>
         
-        <section class="modal--show" id="hotel" tabindex="-1"
-                 role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-            <div class="modal-inner">
-                <header id="modal-label">Hotel</header>
-                <div class="modal-content">
-                    Content for hotel
-                </div>
-                <footer>
-                </footer>
+        <div class="modal fade" id="hotel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
             </div>
-
-            <a href="#!" class="modal-close" title="Close this modal" data-close="Close"
-               data-dismiss="modal">?</a>
-        </section>
+          </div>
+        </div>
         
-        <section class="modal--show" id="hotel-logistics" tabindex="-1"
-                 role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-
-            <div class="modal-inner">
-                <header id="modal-label">Hotel Logistics</header>
-                <div class="modal-content">
-                    Content for hotel logistics
-                </div>
-                <footer>
-                </footer>
+        <div class="modal fade" id="hotel-logistics" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
             </div>
-
-            <a href="#!" class="modal-close" title="Close this modal" data-close="Close"
-               data-dismiss="modal">?</a>
-        </section>
+          </div>
+        </div>
         
     </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/css-modal/modal.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/block.js -->
     <script src="scripts/block.js"></script>
+    <script src="scripts/modal.js"></script>
     <!-- endbuild -->
 </body>
 
