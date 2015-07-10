@@ -1,60 +1,54 @@
 $icon-font-path: "fonts/bootstrap/";
 @import "../app/styles/stylesheets/_bootstrap.scss";
+
 /*@import "../bower_components/css-modal/modal.scss";*/
+
 @import "../app/styles/stylesheets/bourbon/bourbon";
 @import "../app/styles/stylesheets/neat/neat";
+
 /* Colour */
 
 $primary-color: #413f98;
 $secondary-color: #0fb0cf;
 $shadow-color: #882a84;
+
 /* Fonts */
 
 //.container {
-  //  width: 80%;
+//  width: 80%;
 //}
-
 @font-face {
     font-family: 'BrandonGrotReg';
     src: url('/styles/fonts/Brandon_reg.otf');
 }
-
 @font-face {
     font-family: 'BrandonGrotBold';
     src: url('/styles/fonts/Brandon_bld.otf');
 }
-
 @font-face {
     font-family: 'BrandonGrotLight';
     src: url('/styles/fonts/Brandon_light.otf');
 }
-
 @mixin border-radius($radius) {
     @include border-top-radius( $radius);
     @include border-bottom-radius( $radius);
 }
-
 body {
     font-family: 'BrandonGrotReg';
 }
-
 .col-lg-4 {
     padding: 35px;
 }
-
 .col-md-4 {
     padding: 20px;
 }
-
 .col-sm-4 {
     padding: 10px;
 }
-
 header.page {
     margin: 0px auto;
     margin-left: 60px;
 }
-
 .fomento {
     color: $primary_color;
     padding: 5px;
@@ -62,7 +56,6 @@ header.page {
     font-family: 'BrandonGrotBold';
     font-size: 35px;
 }
-
 .travel {
     color: $secondary_color;
     padding: 5px;
@@ -70,16 +63,13 @@ header.page {
     font-family: 'BrandonGrotReg';
     font-size: 35px;
 }
-
 a:hover {
     color: $primary_color;
     text-decoration: none;
 }
-
 ul {
     list-style-type: none;
 }
-
 footer {
     width: 100%;
     position: relative;
@@ -97,24 +87,20 @@ footer {
         color: $secondary-color;
     }
 }
-
 .no-padding {
     padding: 0;
 }
 //legacy
-
 .legacy-col1 {
-    padding:5 15 25 15;
+    padding: 5 15 25 15;
     margin-right: -5px;
     background-color: #ADD8E6;
-    
 }
 .legacy-col2 {
     padding: 5 15 25 15;
     margin-left: -5px;
     background-color: #b0c4de;
 }
-
 .blocks1 {
     width: 90%;
     margin: 0 auto;
@@ -140,12 +126,12 @@ footer {
         }
     }
 }
+
 /***************** Home page ***********************************/
 
 .jumbo-wrapper {
     position: relative;
 }
-
 .jumbotron {
     text-align: center;
     width: 100%;
@@ -155,17 +141,14 @@ footer {
     background-size: cover;
     border-bottom: 1px solid #e5e5e5;
 }
-
 .relative {
     position: relative;
 }
-
 .overlay {
     position: relative;
     top: -90px;
     text-align: center;
 }
-
 .box-link {
     //height: 100%;
     background-color: $primary-color;
@@ -176,7 +159,6 @@ footer {
     margin: 0px auto;
     padding: 0px 20px 20px 20px;
     width: 90%;
-    
     p {
         text-align: left;
         padding-bottom: 10px;
@@ -202,6 +184,7 @@ footer {
         color: $secondary-color;
     }
 }
+
 /************************ Expanding blocks *************************************/
 
 .blocks {
@@ -230,11 +213,10 @@ footer {
         }
     }
 }
-
 .block {
     padding: 0;
     cursor: pointer;
-    position:relative;
+    position: relative;
     .fadout {
         display: none;
         background-color: $secondary-color;
@@ -253,18 +235,15 @@ footer {
     .fadout:hover {
         color: $shadow_color;
     }
-    
 }
-
 .block-header {
     position: absolute;
     top: 0px;
     z-index: 999;
     width: 100%;
     background: url('/images/trans.png') no-repeat;
-     background-size: 100%;
+    background-size: 100%;
 }
-
 .clone {
     position: absolute;
     cursor: default;
@@ -273,7 +252,6 @@ footer {
         font-size: 40;
     }*/
 }
-
 .content {
     overflow: hidden;
     img {
@@ -281,7 +259,6 @@ footer {
         height: auto;
     }
 }
-
 .content-more {
     display: none;
     cursor: default;
@@ -306,7 +283,6 @@ footer {
         height: auto;
     }
 }
-
 .link-text {
     background-color: $secondary-color;
     color: $primary-color;
@@ -316,124 +292,156 @@ footer {
     text-align: center;
     font-family: 'BrandonGrotBold';
 }
-
 //trial
 .hover-tile-outer {
-  $base-border-color: gainsboro !default;
-  $base-line-height: 1.5em !default;
-  $medium-screen: em(640) !default;
-  $hover-tile-height: 10em;
-  $base-spacing: 1.5em;
-    
-  border: 1px solid $base-border-color;
-  cursor: pointer;
-  
-  @include media($medium-screen) {
-    width: 100%;
-  }
-
-  .hover-tile-container {
-    height: auto;
-    max-height: 100px;
-    overflow: hidden;
-  }
-
-  .hover-tile-container:hover > .hover-tile {
-    @include transform(translate(0, -100%));
-  }
-
-  .hover-tile {
-    @include transition(all, 0.8s ease-in-out);
-    background: inherit;
-    color: white;
-    height: auto;
-    max-height: 100px;
-    overflow: hidden;
-    padding: $base-spacing;
-  }
-
-  .hover-tile-hidden {
-    background: transparentize(#000, 0.5);
-
-    p {
-      color: transparentize(#fff, 0.3);
-      line-height: $base-line-height;
+    $base-border-color: gainsboro !default;
+    $base-line-height: 1.5em !default;
+    $medium-screen: em(640) !default;
+    $hover-tile-height: 10em;
+    $base-spacing: 1.5em;
+    border: 1px solid $base-border-color;
+    cursor: pointer;
+    @include media($medium-screen) {
+        width: 100%;
     }
-
-    h4 {
-      margin: 0 0 0.5em 0;
+    .hover-tile-container {
+        height: auto;
+        max-height: 100px;
+        overflow: hidden;
     }
-  }
+    .hover-tile-container:hover > .hover-tile {
+        @include transform(translate(0,
+        -100%));
+    }
+    .hover-tile {
+        @include transition(all,
+        0.8s ease-in-out);
+        background: inherit;
+        color: white;
+        height: auto;
+        max-height: 100px;
+        overflow: hidden;
+        padding: $base-spacing;
+    }
+    .hover-tile-hidden {
+        background: transparentize(#000, 0.5);
+        p {
+            color: transparentize(#fff, 0.3);
+            line-height: $base-line-height;
+        }
+        h4 {
+            margin: 0 0 0.5em 0;
+        }
+    }
 }
-
 .padding-5 {
     padding: 5px;
 }
-
 .tile-one-zero {
     background: url("../images/ts3_sss_3.jpg") 100%;
 }
-
 .tile-one-one {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-one-two {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-one-three {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-one-four {
     background: url("../images/1.4.jpg") 100%;
 }
-
 .tile-two-one {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-two-two {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-two-three {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-two-four {
     background: url("../images/1.4.jpg") 100%;
 }
-
 .tile-three-one {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-three-two {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-three-three {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-three-four {
     background: url("../images/1.4.jpg") 100%;
 }
-
 .tile-four-one {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-four-two {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-four-three {
     background: url("../images/1.2.jpg") 100%;
 }
-
 .tile-four-four {
     background: url("../images/1.4.jpg") 100%;
+}
+.modal-dialog {
+    position: relative;
+    top: 30px;
+    left:10px;
+    width: 1080px;
+}
+.modal-title {
+    h2 {
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: 'BrandonGrotBold';
+    }
+}
+.modal-body {
+    .container1 {
+        background: #D9D9D9;
+        //            width:95%;
+        //            margin-left: auto;
+        //            margin-right: auto;
+        //            .col-md-4 {
+        //                padding: 0px;
+        //               .img1{
+        //                float: right;
+        //                   margin-right: 25px;
+        //                   padding: 10 0 10 0;
+        //               }
+        //            }
+        h2 {
+            /*    background: #BBB;*/
+            font-family: 'BrandonGrotBold';
+            color: black;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 0.1em;
+            margin-top: 0.2em;
+            //                margin-left: 5px;
+            /*    padding: 3px 8px;*/
+            //    padding-left: 1.4em;
+            text-transform: uppercase;
+        }
+        p {
+            color: #333;
+            margin-bottom: 3em;
+            //    padding-left: 3em;
+            //                margin-left: 11px;
+            text-align: justify;
+            font-family: 'BrandonGrotReg';
+        }
+    }
+}
+.modal-no-padding {
+    padding: 0 0 0 20;
+}
+.modal-header .close {
+    font-size: 40px;
 }
