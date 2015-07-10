@@ -284,6 +284,9 @@ footer {
     }
 }
 .link-text {
+    position: absolute;
+    top: 82%;
+    z-index: 999;
     background-color: $secondary-color;
     color: $primary-color;
     width: 100%;
@@ -291,6 +294,10 @@ footer {
     text-transform: uppercase;
     text-align: center;
     font-family: 'BrandonGrotBold';
+}
+
+.rel {
+    position: relative;
 }
 //trial
 .hover-tile-outer {
