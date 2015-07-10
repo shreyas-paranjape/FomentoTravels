@@ -284,15 +284,25 @@ footer {
     }
 }
 .link-text {
-    background-color: $secondary-color;
-    color: $primary-color;
+    position: absolute;
+    top: 70%;
+    z-index: 999;
+//    background-color: $secondary-color;
+    color: white;
     width: 100%;
     padding: 5;
     height: auto;
     text-transform: uppercase;
     text-align: center;
     font-family: 'BrandonGrotBold';
+//    opacity: 0.4;
+     background: url('/images/trans.png') no-repeat;
+    background-size: 100%;
     
+}
+
+.rel {
+    position: relative;
 }
 //trial
 .hover-tile-outer {

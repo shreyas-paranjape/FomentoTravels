@@ -288,7 +288,7 @@ module.exports = function (grunt) {
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
     // cssmin: {
-    //   dist: {
+    //  dist: {
     //     files: {
     //       '<%= config.dist %>/styles/main.css': [
     //         '.tmp/styles/{,*/}*.css',
@@ -299,11 +299,24 @@ module.exports = function (grunt) {
     // },
     // uglify: {
     //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/scripts/scripts.js': [
-    //         '<%= config.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
+    //     files: [{
+    //       '<%= config.dist %>/scripts/main.js': [
+    //         '<%= config.app %>/scripts/main.js'
+    //        ] 
+    //       },{
+    //       '<%= config.dist %>/scripts/block.js': [
+    //         '<%= config.app %>/scripts/block.js'
+    //        ]
+    //       },{
+    //	   '<%= config.dist %>/scripts/modal.js': [
+    //         '<%= config.app %>/scripts/modal.js'
+    //        ]
+    //	   },{
+    //	   '<%= config.dist %>/scripts/jquery.js': [
+    //         '<%= config.app %>/scripts/jquery.js'
+    //        ]
+    //	   }
+    //     ]
     //   }
     // },
     // concat: {
