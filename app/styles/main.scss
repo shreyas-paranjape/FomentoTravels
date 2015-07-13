@@ -35,6 +35,9 @@ $shadow-color: #882a84;
 }
 body {
     font-family: 'BrandonGrotReg';
+    p {
+        line-height: 113%;
+    }
 }
 .col-lg-4 {
     padding: 35px;
@@ -48,6 +51,8 @@ body {
 header.page {
     margin: 0px auto;
     margin-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 .fomento {
     color: $primary_color;
@@ -92,14 +97,55 @@ footer {
 }
 //legacy
 .legacy-col1 {
-    padding: 5 15 25 15;
+    padding: 5 15 35 15;
     margin-right: -5px;
-    background-color: #ADD8E6;
+    background-color: rgba(65, 63, 152, 0.1);
+    .leg_head {
+        background-color: #413F98;
+        margin-left: -15px;
+        position: relative;
+        width: 106.5%;
+        height: 50px;
+        margin-top: -25px;
+        h2 {
+            color: white;
+            padding: 10 10 10 10;
+        }
+    }
+    p {
+        padding: 20 10 0 0;
+        text-align: justify;
+        color: rgba(0,0,0,0.6);
+//        color: black;
+    }
+    a {
+        color: 0FB0CF;
+    }
 }
 .legacy-col2 {
     padding: 5 15 25 15;
     margin-left: -5px;
-    background-color: #b0c4de;
+    background-color: rgba(15,176,207, 0.1);
+    .leg_head {
+        background-color: #0FB0CF;
+        margin-left: -15px;
+        position: relative;
+        width: 106.5%;
+        height: 50px;
+        margin-top: -25px;
+        h2 {
+           color: white;
+            padding: 10 10 10 10;
+        }
+    }
+    p {
+        padding: 20 10 0 0;
+        text-align: justify;
+        color: rgba(0,0,0,0.6);
+    }
+    a {
+        color: 0FB0CF;
+    }
 }
 .blocks1 {
     width: 90%;
@@ -112,7 +158,7 @@ footer {
             color: white;
             font-family: 'BrandonGrotBold';
             text-transform: uppercase;
-            text-decoration: underline;
+            text-decoration: none;
         }
         h3:hover {
             color: $secondary_color;
@@ -162,6 +208,7 @@ footer {
     p {
         text-align: left;
         padding-bottom: 10px;
+        padding-top: 5px;
     }
     .explore {
         text-align: left;
@@ -170,6 +217,7 @@ footer {
         text-transform: uppercase;
         font-family: 'BrandonGrotBold';
         text-align: center;
+        padding-top: 15px;
     }
     hr {
         width: 25%;
@@ -198,7 +246,7 @@ footer {
             color: white;
             font-family: 'BrandonGrotBold';
             text-transform: uppercase;
-            text-decoration: underline;
+            //            text-decoration: underline;
             opacity: 1.0;
         }
         h3:hover {
@@ -224,10 +272,10 @@ footer {
         cursor: pointer;
         position: absolute;
         top: 0;
-        right: -40;
+        right: 0;
         width: 40px;
         height: 40px;
-        font-size: 30;
+        font-size: 35;
         vertical-align: middle;
         text-align: center;
         float: right;
@@ -243,6 +291,10 @@ footer {
     width: 100%;
     background: url('/images/trans.png') no-repeat;
     background-size: 100%;
+    .underline {
+        padding-bottom: 2px;
+        border-bottom: white 3px solid;
+    }
 }
 .clone {
     position: absolute;
@@ -270,9 +322,15 @@ footer {
     .overlay-content {
         padding: 0 10px 0 10px;
         height: 80%;
-        font-size: 20;
+        //        font-size: 20;
+        margin-top: 10px;
+        margin-left: 5px;
+        p {
+            color: #666666;
+            font-size: 17.5px;
+        }
         hr {
-            width: 25%;
+            width: 20%;
             height: 2px;
             color: $primary-color;
             background-color: $primary-color;
@@ -287,7 +345,7 @@ footer {
     position: absolute;
     top: 70%;
     z-index: 999;
-//    background-color: $secondary-color;
+    //    background-color: $secondary-color;
     color: white;
     width: 100%;
     padding: 5;
@@ -295,12 +353,10 @@ footer {
     text-transform: uppercase;
     text-align: center;
     font-family: 'BrandonGrotBold';
-//    opacity: 0.4;
-     background: url('/images/trans.png') no-repeat;
+    //    opacity: 0.4;
+    background: url('/images/trans-blue.png') no-repeat;
     background-size: 100%;
-    
 }
-
 .rel {
     position: relative;
 }
@@ -348,6 +404,9 @@ footer {
 }
 .padding-5 {
     padding: 5px;
+    img{
+       //margin-top:10px; 
+    }
 }
 .tile-one-zero {
     background: url("../images/ts3_sss_3.jpg") 100%;
@@ -406,25 +465,13 @@ footer {
     left: 10px;
     width: 1080px;
 }
-
 .modal-body {
-    
     .container1 {
-        background: #D9D9D9;
-        margin-right: 0px; 
-    margin-left: 0px;
-        
-        //            width:95%;
-        //            margin-left: auto;
-        //            margin-right: auto;
-        //            .col-md-4 {
-        //                padding: 0px;
-        //               .img1{
-        //                float: right;
-        //                   margin-right: 25px;
-        //                   padding: 10 0 10 0;
-        //               }
-        //            }
+        background: #ececec;
+        background: #ececec;
+        margin-right: 0px;
+        margin-left: 0px;
+       
         h2 {
             /*    background: #BBB;*/
             font-family: 'BrandonGrotBold';
@@ -432,8 +479,8 @@ footer {
             display: inline-block;
             font-size: 20px;
             font-weight: 800;
-            margin-bottom: 0.1em;
-            margin-top: 0.2em;
+            //            margin-bottom: 0.1em;
+            //            margin-top: 0.2em;
             //                margin-left: 5px;
             /*    padding: 3px 8px;*/
             //    padding-left: 1.4em;
@@ -442,6 +489,7 @@ footer {
         p {
             color: #333;
             margin-bottom: 3em;
+            font-size: 16px;
             //    padding-left: 3em;
             //                margin-left: 11px;
             text-align: justify;
@@ -452,13 +500,14 @@ footer {
 .modal-no-padding {
     padding: 0 0 0 20;
 }
-.modal-header{
-.close {
-    font-size: 40px;
-}
-    .modal-title{
+.modal-header {
+    .close {
+        font-size: 40px;
+    }
+    .modal-title {
         font-weight: 800;
         text-transform: uppercase;
         font-family: 'BrandonGrotBold';
+        margin-bottom: -15px;
     }
 }
