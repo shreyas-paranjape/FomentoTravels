@@ -11,7 +11,7 @@ $(document).ready(function () {
             .unbind('click')
             .not(clone)
                 .animate({opacity: 0}, 0, 'swing', function () {});
-        $('footer').toggle();
+        $('footer').animate({opacity: 0}, 0);
         clone
             .addClass('clone')
             .css({'top': offset.top - 4, 'left': offset.left - 4, width: that.width()})
@@ -31,7 +31,7 @@ $(document).ready(function () {
         });
         $('.fadout', clone).bind('click', function () {
             $('.fadout', clone).toggle();
-            $('footer').toggle();
+             $('footer').animate({opacity: 1}, 0);
             $('.overlay-content', clone).toggle();
             $('.block').not(clone).bind('click', fader);
             clone.animate({ top: offset.top - 4, left: offset.left - 4, width: that.width(), height: that.height()}, 800);

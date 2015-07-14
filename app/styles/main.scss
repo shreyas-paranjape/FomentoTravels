@@ -50,20 +50,21 @@ body {
 }
 header.page {
     margin: 0px auto;
-    margin-left: 60px;
+//    margin-left: 60px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .fomento {
     color: $primary_color;
-    padding: 5px;
+    padding-right: 5px;
+//    margin-left: 50px;
     text-transform: uppercase;
     font-family: 'BrandonGrotBold';
     font-size: 35px;
 }
 .travel {
     color: $secondary_color;
-    padding: 5px;
+//    padding: 5px;
     text-transform: uppercase;
     font-family: 'BrandonGrotReg';
     font-size: 35px;
@@ -265,6 +266,7 @@ footer {
     padding: 0;
     cursor: pointer;
     position: relative;
+    
     .fadout {
         display: none;
         background-color: $secondary-color;
@@ -274,7 +276,7 @@ footer {
         top: 0;
         right: 0;
         width: 40px;
-        height: 40px;
+        height: 45px;
         font-size: 35;
         vertical-align: middle;
         text-align: center;
@@ -291,15 +293,20 @@ footer {
     width: 100%;
     background: url('/images/trans.png') no-repeat;
     background-size: 100%;
+//    margin-right: 8px;
     .underline {
         padding-bottom: 2px;
         border-bottom: white 3px solid;
     }
 }
+
 .clone {
     position: absolute;
     cursor: default;
     z-index: 999;
+    .block-header {
+        width: 99.5%;
+    }
     /*h3 {
         font-size: 40;
     }*/
@@ -316,14 +323,15 @@ footer {
     cursor: default;
     background-color: white;
     color: black;
-    padding-top: 60px;
+    padding-top: 65px;
     overflow-x: hidden;
+    overflow-y: hidden;
     opacity: 0;
     .overlay-content {
         padding: 0 10px 0 10px;
         height: 80%;
         //        font-size: 20;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-left: 5px;
         p {
             color: #666666;
@@ -342,21 +350,26 @@ footer {
     }
 }
 .link-text {
-    position: absolute;
-    top: 73%;
-    z-index: 999;
-    //    background-color: $secondary-color;
-    color: white;
+//    position: absolute;
+//    top: 80%;
+//    z-index: 999;
+    background-color: $secondary-color;
+    color: $primary-color;
     width: 100%;
-    padding: 5;
+    padding: 8;
     height: auto;
     text-transform: uppercase;
     text-align: center;
     font-family: 'BrandonGrotBold';
+    font-size:12px;
     //    opacity: 0.4;
-    background: url('/images/trans-blue.png') no-repeat;
+//    background: url('/images/trans-blue.png') no-repeat;
     background-size: 100%;
+ 
 }
+.link-text:hover {
+ color: white;
+ }
 .rel {
     position: relative;
 }
@@ -404,10 +417,13 @@ footer {
 }
 .padding-5 {
     padding: 5px;
-    img{
-       //margin-top:10px; 
-    }
+//     margin-left:10px;
+    
 }
+//.paddingi-5 {
+//    padding: 15 5 5 5;
+//    margin-left:10px;
+//}
 
 .modal-dialog {
     position: relative;
