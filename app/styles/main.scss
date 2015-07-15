@@ -19,15 +19,15 @@ $shadow-color: #882a84;
 //}
 @font-face {
     font-family: 'BrandonGrotReg';
-    src: url('styles/fonts/Brandon_reg.otf');
+    src: url('fonts/Brandon_reg.otf');
 }
 @font-face {
     font-family: 'BrandonGrotBold';
-    src: url('styles/fonts/Brandon_bld.otf');
+    src: url('fonts/Brandon_bld.otf');
 }
 @font-face {
     font-family: 'BrandonGrotLight';
-    src: url('styles/fonts/Brandon_light.otf');
+    src: url('fonts/Brandon_light.otf');
 }
 @mixin border-radius($radius) {
     @include border-top-radius( $radius);
@@ -176,7 +176,6 @@ footer {
 
 /***************** Home page ***********************************/
 
-
 .relative {
     position: relative;
 }
@@ -280,7 +279,7 @@ footer {
     top: 0px;
     z-index: 999;
     width: 100%;
-    background: url('images/trans.png') no-repeat;
+    background: url('../images/trans.png') no-repeat;
     background-size: 100%;
 //    margin-right: 8px;
     .underline {
