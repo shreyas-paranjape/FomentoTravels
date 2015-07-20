@@ -27,38 +27,42 @@
                 </div>
             </a>
         </header>
-        <h1>Thank You for contacting us. we will get back to you soon!!</h1>
+        <div class="container terms" style="padding-bottom:440px;">
+            <h2>Thank You for contacting us. we will get back to you soon!!</h2>
+        </div>
         <?php
     if ($_POST["submit"]) {
         $name = $_POST['name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
         $from = 'Fomento Travel'; 
-        $to = 'contact@fomentotravel.com'; 
+        $tos = array ('amey@fomentotravel.com','nikhil@fomentotravel.com','nitish@fomentotravel.com'); 
         $subject = 'Fomento Travel Contact Form';
-        
         $body = "From: $name\n E-Mail: $email\n Message:\n $message";
- 
+        foreach ($tos as $to){
+            mail($to,$subject,$body);
+        }
+        
 // If there are no errors, send the email
 //        echo "<p style=' '>"Thank you for contacting us.";
     }
 ?>
             <footer class="container">
                 <hr />
-                <nav class="row" style="margin-left: 100px; margin-right: -40px;">
+                <nav class="row" style="margin-left: 130px; margin-right: -40px;">
                     <ul>
                         <li class="col-lg-3 col-md-3 col-sm-3">
-                            <a href="#"><h4>About</h4></a>
+                            <a href="legacy.html"><h4>About</h4></a>
                         </li>
 
                         <li class="col-lg-3 col-md-3 col-sm-3">
-                            <a href=""><h4>Terms &amp; conditions</h4></a>
+                            <a href="terms.html"><h4 style="margin-left: -30px;">Terms &amp; conditions</h4></a>
                         </li>
                         <li class="col-lg-3 col-md-3 col-sm-3">
-                            <a href=""><h4>Privacy policy</h4></a>
+                            <a href="policy.html"><h4>Privacy policy</h4></a>
                         </li>
                         <li class="col-lg-3 col-md-3 col-sm-3">
-                            <a href="#"><h4>Contact</h4></a>
+                            <a href="contact.html"><h4>Contact</h4></a>
                         </li>
                     </ul>
                 </nav>
