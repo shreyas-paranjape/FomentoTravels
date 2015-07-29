@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fomento Travels: Our Legacy</title>
+    <title>Fomento Travel</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
