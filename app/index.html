@@ -10,10 +10,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/jquery-ui-1.11.3/jquery-ui.css">
     <!-- endbuild -->
 </head>
 
@@ -25,9 +27,14 @@
     <header class="container page">
         <a href="index.html">
             <div>
-                <div>
+                <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
                     <span style="margin-left: 50px;" class="fomento">Fomento</span>
                     <span class="travel">Travel</span>
+                </div>
+                <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+                    <a data-toggle="modal" class="btn no-padding rel" href="plan.html" data-target="#beach">
+                        <span style="margin-left: 50px;" class="glyphicon glyphicon-earphone" aria-hidden="true"></span><span>Plan a trip</span>
+                    </a>
                 </div>
             </div>
         </a>
@@ -82,8 +89,47 @@
                     </ul>
                 </nav>
             </footer>
+            <!-- build:js(.) scripts/vendor.js -->
+            <!-- bower:js -->
+            <script src="bower_components/jquery/dist/jquery.js"></script>
+            <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+            <!-- endbower -->
+            <!-- endbuild -->
+            <!-- build:js({app,.tmp}) scripts/main.js -->
+            <script src="bower_components/jquery-ui-1.11.3/jquery-ui.js"></script>
+            <script src="scripts/block.js"></script>
+            <!--            <script src="scripts/modal.js"></script>-->
+            <script src="scripts/tooltip.js"></script>
+            <script src="scripts/date.js"></script>
+
+
+            <div class="modal fade" id="beach" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-69868519-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 
 </html>

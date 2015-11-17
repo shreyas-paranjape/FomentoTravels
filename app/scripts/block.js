@@ -68,4 +68,6 @@ $(document).ready(function () {
         });
     };
     $('.block').bind('click', fader);
+    //    $('[data-toggle="tooltip"]').tooltip();
+
 });

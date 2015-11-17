@@ -27,6 +27,9 @@ $shadow-color: #000000;
     @include border-top-radius( $radius);
     @include border-bottom-radius( $radius);
 }
+#datepicker {
+    z-index: 2000;
+}
 body {
     font-family: 'BrandonGrotReg';
     p {
@@ -412,4 +415,28 @@ footer {
         text-align: justify;
         color: #666666;
     }
+}
+.icon {
+    color: white;
+}
+.new_line {
+    margin-bottom: 15px;
+}
+.form-control,
+.form-control + .input-group-btn {
+    .new {
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+    border-color: $primary-color;
+    box-shadow: none;
+}
+.form-control:focus,
+.form-control:focus + .input-group-btn {
+    .new {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+    }
+    border-color: $secondary-color;
+    box-shadow: none;
 }
