@@ -36,11 +36,14 @@
         $email = $_POST['email'];
         $message = $_POST['message'];
         $from = 'Fomento Travel'; 
-        $tos = array ('amey@fomentotravel.com','nikhil@fomentotravel.com','nitish@fomentotravel.com'); 
-        $subject = 'Fomento Travel Contact Form';
-        $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+        $tos = array ('amey@fomentotravel.com', 'nikhil@fomentotravel.com','nitish@fomentotravel.com'); 
+        $subject = 'Fomento Travel Contact Mail';
+        $body = "E-Mail: $email\n Message: $message";
         foreach ($tos as $to){
-            mail($to,$subject,$body);
+        	$headers = "From: " . $name . "<" . $email .">" . "\r\n" .
+           "Reply-To: " . $name . "<" . $email .">" . "\r\n" .
+           "X-Mailer: PHP/" . phpversion();
+            mail($to,$subject,$body,$headers,"-f".$email);
         }
         
 // If there are no errors, send the email

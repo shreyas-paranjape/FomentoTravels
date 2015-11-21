@@ -28,45 +28,71 @@
                 </div>
             </a>
         </header>
+        <div class="container terms" style="padding-bottom:440px;">
+            <h2>Thank You for contacting us. we will get back to you soon!!</h2>
+        </div>
 
         <?php
-    $file = fopen("id-counter.txt", "r") or exit("Unable to open file!");
-    $line=0;
-    while (!feof($file)) {
-    $line = fgets($file);
-    ++$line;
+    if ($_POST["submit"]) {
+        $name = $_POST['username'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $region = $_POST['region'];
+        if (empty($_POST["region"])) {
+            $region = "Not entered";
+        } else {
+            $region = $_POST["region"];
+        }
+        $ppl = $_POST['ppl'];
+        $date = $_POST['date'];
+        $night= $_POST['night'];
+        $pref= $_POST['preference'];
+        $pref = implode(', ', $pref);
+        $bud = $_POST['budget'];
+        if (empty($_POST["budget"])){
+            $bud = "Not entered";
+        } else {
+            $bud = $_POST["budget"];
+        }
+        $city = $_POST['city'];
+        if (empty($_POST["city"])) {
+            $city = "Not entered";
+        } else {
+            $city = $_POST["city"];
+        }
+        $trip_type = $_POST['trip'];
+        if (empty($_POST["trip"])) {
+            $trip_type = "Not entered";
+        } else {
+            $trip_type = $_POST["trip"];
+        }
+        $que = $_POST['queries'];
+        if (empty($_POST["queries"])) {
+            $que = "Not entered";
+        } else {
+            $que = $_POST["queries"];
+        }
+        $time = $_POST['time'];
+        if (empty($_POST["time"])){
+            $time = "Not entered";
+        } else {
+            $time = $_POST["time"];
+        }
+        $from = 'Fomento Travel'; 
+        $tos = array ('amey@fomentotravel.com'); 
+        $subject = 'Plan a trip details';
+        $body = "Following are the details from the 'Plan a trip form'\n From: $name\n E-Mail: $email\n Phone number: $phone\n Region of Stay: $region\n No. of people: $ppl\n Date of visit: $date\n No. of nights: $night\n Preference to contact me: $pref\n Budget: $bud\n Origin City: $city\n Trip Type: $trip_type\n Queries: $que\n Preferable time to contact: $time\n";
+        foreach ($tos as $to){
+        	$headers = "From: " . $name . "<" . $email .">" . "\r\n" .
+           "Reply-To: " . $name . "<" . $email .">" . "\r\n" .
+           "X-Mailer: PHP/" . phpversion();
+            mail($to,$subject,$body,$headers,"-f".$email);
+        }
+        
+// If there are no errors, send the email
+//        echo "<p style=' '>"Thank you for contacting us.";
     }
-    fclose($file);
-    $filew=fopen("id-counter.txt", "w") or exit("Unable to open file!");
-    fwrite($filew,$line);
-    fclose($filew);
-    $keys=array('username','email','phone','region','ppl','date','preference','budget','city','interest','queries','time');
-    $csv_line = array();
-    foreach($keys as $key){
-    	$find = "/\r\n/";
-	$replace = " ";
-    	$string= preg_replace($find, $replace, $_GET[$key]);
-        array_push($csv_line,'' . $string);
-    }
-    $fname = 'form-data.tsv';
-    $csv_line = $line. "	" . implode("	",$csv_line);
-    $csv_line = $csv_line . "\r\n";
-    $fcon = fopen($fname,'a');
-    $fcontent = $csv_line;
-    fwrite($fcon,$csv_line);
-    fclose($fcon);
-    echo "Your application has been submitted. We will contact you as soon as possible if we find you fit for our Scholarship program. Thank you for Applying.";
-      
-    
-
 ?>
-            <br>
-            <br>
-            <h1>Click here to return to the home page
-								<a href="index.html">
-									<img src="" alt="fomentologo"/>
-								</a>
-							</h1>
     </div>
     <footer>
         <hr />

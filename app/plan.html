@@ -1,6 +1,6 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h2 class="modal-title" id="myModalLabel" style="">Plan a trip</h2>
+    <h2 class="modal-title" id="myModalLabel" style="">Plan your trip - Goa Calling </h2>
 </div>
 
 <div class="modal-body">
@@ -34,161 +34,210 @@
 -->
 
     <div class="row" style="margin-left:65px;">
-        <div class="col-lg-6 col-md-6">
-            <h5 style="text-align:left;">*MANDATORY FIELDS</h5>
-            <form class="form-horizontal" id="defaultForm" method="post" role="form" action="plan.php">
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Name">
-                            <input class="form-control" name="username" type="text" placeholder="Your name*">
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-user icon" aria-hidden="true"></span></button>
-                            </span>
+        <form class="form-horizontal" id="defaultForm" role="form" method="post" action="plan.php">
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <h5 style="text-align:left;">*MANDATORY FIELDS</h5>
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Name">
+                                <input class="form-control" name="username" type="text" placeholder="Full Name*" required>
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-user icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Email">
-                            <input class="form-control" name="email" type="text" placeholder="Your Email*">
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-envelope icon" aria-hidden="true"></span></button>
-                            </span>
+                <div class="col-md-6 col-lg-6">
+                    <h5 style="text-align:left;">Fill these to let us help you better! <i style="color:#0fb0cf;">(Optional)</i></h5>
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your budget">
+                                <select class="form-control" id="sel1" name="budget">
+                                    <option disabled selected hidden>Budget</option>
+                                    <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
+                                    <option value="₹10,000 - ₹15,000">₹10,000 - ₹15,000</option>
+                                    <option value="₹15,000 - ₹20,000">₹15,000 - ₹20,000</option>
+                                    <option value="₹20,000 & above">₹20,000 &amp; above</option>
+                                </select>
+                                <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Contact Number">
-                            <input class="form-control" name="phone" type="text" placeholder="Your Phone Number*">
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-phone-alt icon" aria-hidden="true"></span></button>
-                            </span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Email">
+                                <input class="form-control" name="email" type="email" placeholder="Email*" required>
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-envelope icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="I want to go:">
-                            <select class="form-control" id="sel1" name="region">
-                                <option>Select</option>
-                                <option value="1">North Goa</option>
-                                <option value="2">South Goa</option>
-                            </select>
-                            <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-send icon" aria-hidden="true"></span></button>
-                            </span>
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your origin city">
+                                <input class="form-control" name="city" type="text" placeholder="Origin City">
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-map-marker icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter the total number of people">
-                            <input class="form-control" name="ppl" type="text" placeholder="No. Of People*">
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-user icon" aria-hidden="true"></span></button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Travel Date">
-                            <input class="form-control datepicker" name="date" type="text" id="datepicker" placeholder="Your Travel Date*">
+            </div>
 
-                            <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-calendar icon" aria-hidden="true"></span></button>
-                            </span>
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Contact Number">
+                                <input class="form-control" name="phone" type="text" placeholder="Contact Number*" required>
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-phone-alt icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h5>I Prefer:</h5>
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your Trip type">
+                                <select class="form-control" id="sel1" name="trip">
+                                    <option disabled selected hidden>Trip type</option>
+                                    <option value="Honeymoon">Honeymoon</option>
+                                    <option value="family">Family</option>
+                                    <option value="friends">Friends</option>
+                                    <option value="adventure">Adventure</option>
+                                </select>
+                                <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-briefcase icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" name="preference" value="phone" checked>Phone
-                        </label>
-                    </div>
-                    <div class="col-md-3">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" name="preference" value="email" checked>Email
-                        </label>
-                    </div>
-                    <div class="col-md-3"></div>
                 </div>
+            </div>
 
-            </form>
-        </div>
-        <div class="col-lg-6 col-md-6">
-            <h4 style="text-align:left;">Fill these to let us help you better! <i style="color:#0fb0cf;">(Optional)</i></h4>
-            <form class="form-horizontal" role="form">
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your budget">
-                            <select class="form-control" id="sel1" name="budget">
-                                <option>Budget</option>
-                                <option value="1">₹5,000 - ₹10,000</option>
-                                <option value="2">₹10,000 - ₹15,000</option>
-                                <option value="3">₹15,000 - ₹20,000</option>
-                            </select>
-                            <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span></button>
-                            </span>
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="I want to go:">
+                                <select class="form-control" id="sel1" name="region">
+                                    <option disabled selected hidden>Location</option>
+                                    <option value="North Goa">North Goa</option>
+                                    <option value="South Goa">South Goa</option>
+                                    <option value="North Goa/South Goa">North Goa/South Goa</option>
+                                </select>
+                                <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-send icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your origin city">
-                            <input class="form-control" name="city" type="text" placeholder="Origin City">
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button"><span class="glyphicon glyphicon-flag icon" aria-hidden="true"></span></button>
-                            </span>
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Your queries">
+                                <textarea class="form-control" rows="3" name="queries" placeholder="Any specific requirement, Eg. Type of Hotel etc."></textarea>
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button" style="height: 87px;"><span class="glyphicon glyphicon-comment icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose your Travel interest">
-                            <select class="form-control" id="sel1" name="interest">
-                                <option>Travel interests</option>
-                                <option value="party">Partying</option>
-                                <option value="para">Parasailing</option>
-                                <option value="visit">Temple/Church visits</option>
-                            </select>
-                            <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-briefcase icon" aria-hidden="true"></span></button>
-                            </span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-6" style="top: -50px;">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter the total number of people">
+                                <input class="form-control" name="ppl" id="ppl" type="number" min="0" max="50" placeholder="No. Of People*" required>
+                                <span class="input-group-btn"><button class="btn btn-default new" type="button"><i class="fa fa-users icon"></i></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Your queries">
-                            <textarea maxlength="80" class="form-control" rows="3" id="queries" placeholder="Your queries (maximum 80 characters)"></textarea>
-                            <span class="input-group-btn"><button class="btn btn-default new" type="button" style="height: 87px;"><span class="glyphicon glyphicon-comment icon" aria-hidden="true"></span></button>
-                            </span>
+                <div class="col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose the preferable time of the day to contact you">
+                                <select class="form-control" id="sel1" name="time">
+                                    <option disabled selected hidden>Preferable time of the day to contact you</option>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                    <option value="Evening">Evening</option>
+                                    <option value="Night">Night</option>
+                                </select>
+                                <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-time icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-10">
-                        <div class="input-group" data-toggle="tooltip" data-placement="top" title="Choose the preferable time of the day to contact you">
-                            <select class="form-control" id="sel1" name="time">
-                                <option>Preferable time of the day to contact you</option>
-                                <option value="1">Morning</option>
-                                <option value="2">Afternoon</option>
-                                <option value="3">Evening</option>
-                                <option value="4">Night</option>
-                            </select>
-                            <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-time icon" aria-hidden="true"></span></button>
-                            </span>
+            </div>
+            <div class="row" style="margin-bottom: -50px;">
+                <div class="col-md-3 col-lg-3" style="top: -47px;">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter Your Travel Date">
+                                <input class="form-control datepicker" name="date" type="text" id="datepicker" placeholder="Travel Date*" required>
+
+                                <span class="input-group-btn"><button class="btn btn-default new"  type="button"><span class="glyphicon glyphicon-calendar icon" aria-hidden="true"></span></button>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
+                <div class="col-md-3 col-lg-3" style="top: -47px;left: -40px;">
+                    <div class="form-group">
+                        <div class="col-sm-10">
+                            <div class="input-group" data-toggle="tooltip" data-placement="top" title="Enter the number of nights">
+                                <input class="form-control" name="night" id="night" type="number" placeholder="Nights*" min="0" max="20" required>
+                                <span class="input-group-btn"><button min="0" max="30" class="btn btn-default new" type="button"><i class="fa fa-moon-o icon"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-left: 500px;margin-right: 65px;">
+                <div class="col-md-5">
+                    <h5>Preferred way to contact:</h5>
+                </div>
+                <div class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="preference[]" value="phone" checked>Phone
+                    </label>
+                </div>
+                <div class="col-md-3">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="preference[]" value="email" checked>Email
+                    </label>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+
+
+            <div class="row" style="margin-left: -90px;">
+                <!--                <button type="submit" name="submit" class="btn btn-default btn-lg" style="background-color:#0fb0cf; color:white;">SUBMIT</button>-->
+                <input id="submit" name="submit" type="submit" value="Submit" onclick="myfuntion()" class="btn btn-primary btn-lg" style="background-color:#0fb0cf;">
+
+            </div>
+
+        </form>
     </div>
 
-    <div class="row">
-        <button type="button" class="btn btn-default btn-lg" style="background-color:#0fb0cf; color:white;">SUBMIT</button>
-    </div>
 
 </div>
-<script src="scripts/validate.js"></script>
+<!--<script src="scripts/validate.js"></script>-->
 
 <script>
     $('[data-toggle="tooltip"]').tooltip();
@@ -196,8 +245,22 @@
     $("#datepicker").datepicker({
         dateFormat: "dd-mm-yy",
         changeMonth: false, //this option for allowing user to select month
-        changeYear: false //this option for allowing user to select from year range // 
+        changeYear: false,
+        minDate: 0 //this option for allowing user to select from year range // 
     });
     //    $('.datepicker').datepicker()
-
+	function myfunction() {
+        var txt = "";
+        if (document.getElementById("ppl").validity.rangeOverflow) {
+            txt = "Value too large";
+        } else {
+            txt = "Input OK";
+        }
+        var txt2 = "";
+        if (document.getElementById("night").validity.rangeOverflow) {
+            txt2 = "Value too large";
+        } else {
+            txt2 = "Input OK";
+        }
+    }
 </script>
